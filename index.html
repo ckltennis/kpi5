@@ -29,8 +29,7 @@ var text = '{"employees":[' +
 '{"firstName":"Peter","lastName":"Jones" }]}';
 
 obj = JSON.parse(text);
-document.getElementById("demo").innerHTML =
-obj.employees;
+document.getElementById("demo").innerHTML =JSON.stringify(obj);
 }
 </script> 
 	
