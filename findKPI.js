@@ -1,6 +1,6 @@
 'use strict';
 
-function getKPI(tempExcel){
+function getKPI(tempExcel, tempWantedPlant){
   //if(typeof require !== 'undefined') XLSX = require('xlsx');
   let XLSX;
   if(typeof require !== 'undefined') XLSX = require('xlsx');
@@ -28,566 +28,461 @@ function getKPI(tempExcel){
 
   sheet_name_list.forEach(function getSafetyKPI(tempSheetnames) { /* iterate through sheets */
     let worksheet = workbook.Sheets[tempSheetnames];
-    let wantedPlant = "Warren";
+    let wantedPlant = tempWantedPlant;
     if(tempSheetnames===wantedPlant){
       for (let tempValueofCell in worksheet) {
       /* all keys that do not begin with "!" correspond to cell addresses */
         if(tempValueofCell[0] === '!') continue;
   //       console.log(worksheet[tempValueofCell].v);//must use v, can't change
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='C29'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C29'))
        {
            safetyKpiJsonBase.incident[0].death.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D29'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D29'))
        {
            safetyKpiJsonBase.incident[0].death.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E29'))
        {
            safetyKpiJsonBase.incident[0].death.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F29'))
        {
            safetyKpiJsonBase.incident[0].death.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G29'))
        {
            safetyKpiJsonBase.incident[0].death.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H29'))
        {
            safetyKpiJsonBase.incident[0].death.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I29'))
        {
            safetyKpiJsonBase.incident[0].death.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J29'))
        {
            safetyKpiJsonBase.incident[0].death.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K29'))
        {
            safetyKpiJsonBase.incident[0].death.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L29'))
        {
            safetyKpiJsonBase.incident[0].death.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M29'))
        {
            safetyKpiJsonBase.incident[0].death.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N29'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N29'))
        {
            safetyKpiJsonBase.incident[0].death.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].death.Dec);
        }
 ///////////////////////////////////////////////////////////////////////
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='C30'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D30'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N30'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N30'))
        {
            safetyKpiJsonBase.incident[0].lost_work_day.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].lost_work_day.Dec);
        }
        //////////////////////////////////////////////////////////////////////////
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='C31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D31'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N31'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N31'))
        {
            safetyKpiJsonBase.incident[0].injury_with_restrictions.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].injury_with_restrictions.Dec);
        }
 //////////////////////////////////////////////////////////////
-  if((tempSheetnames==='Warren')&&(tempValueofCell==='C32'))
+  if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D32'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N32'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N32'))
        {
            safetyKpiJsonBase.incident[0].recordable_incident.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].recordable_incident.Dec);
        }
        ////////////////////////////////////////
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='C33'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D33'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N33'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N33'))
        {
            safetyKpiJsonBase.incident[0].first_aid.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].first_aid.Dec);
        }
        ///////////////////////////////////////////////////////
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='C34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D34'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N34'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N34'))
        {
            safetyKpiJsonBase.incident[0].near_miss.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].near_miss.Dec);
        }
        /////////////////////////////////////////////////////////////////
-                     if((tempSheetnames==='Warren')&&(tempValueofCell==='C35'))
+                     if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D35'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N35'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N35'))
        {
            safetyKpiJsonBase.incident[0].unsafe_condition.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_condition.Dec);
        }
        /////////////////////////////////////////////////
-                       if((tempSheetnames==='Warren')&&(tempValueofCell==='C36'))
+                       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D36'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N36'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N36'))
        {
            safetyKpiJsonBase.incident[0].unsafe_act.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].unsafe_act.Dec);
        }
        /////////////////////////////////////////
-                      if((tempSheetnames==='Warren')&&(tempValueofCell==='C37'))
+                      if((tempSheetnames===wantedPlant)&&(tempValueofCell==='C37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Jan=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Jan);
        }
-       if((tempSheetnames==='Warren')&&(tempValueofCell==='D37'))
+       if((tempSheetnames===wantedPlant)&&(tempValueofCell==='D37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Feb=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Feb);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='E37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='E37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Mar=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Mar);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='F37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='F37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Apr=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Apr);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='G37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='G37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.May=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.May);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='H37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='H37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Jun=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Jun);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='I37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='I37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Jul=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Jul);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='J37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='J37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Aug=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Aug);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='K37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='K37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Sep=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Sep);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='L37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='L37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Oct=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Oct);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='M37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='M37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Nov=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Nov);
        }
-              if((tempSheetnames==='Warren')&&(tempValueofCell==='N37'))
+              if((tempSheetnames===wantedPlant)&&(tempValueofCell==='N37'))
        {
            safetyKpiJsonBase.incident[0].hours_worked.Dec=worksheet[tempValueofCell].v;
-           console.log(safetyKpiJsonBase.incident[0].hours_worked.Dec);
        }
       }
     }
-    console.log("this is the type of "+typeof safetyKpiJsonBase);
     return safetyKpiJsonBase;
   });
+  console.log(JSON.stringify(safetyKpiJsonBase, undefined, 2));//pretty print style
+  //console.log(JSON.stringify(safetyKpiJsonBase));
+  //console.log("this is the type of "+typeof safetyKpiJsonBase);
 }
 
 let excelUsing = 'safetyTest.xlsx';
-getKPI(excelUsing);
+let wantedPlant= 'Toluca';
+getKPI(excelUsing, wantedPlant);
