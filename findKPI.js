@@ -486,3 +486,5 @@ function getKPI(tempExcel, tempWantedPlant){
 let excelUsing = 'safetyTest.xlsx';
 let wantedPlant= 'Toluca';
 getKPI(excelUsing, wantedPlant);
+
+document.getElementById("demo").innerHTML =JSON.stringify(safetyKpiJsonBase);
