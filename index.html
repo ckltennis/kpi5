@@ -19,7 +19,7 @@
 <button onclick="myFunction()">Click me</button>	
 <br>
 <br>
-<button onclick="getKPI()">GET KPI</button>
+<button onclick="test()">GET KPI</button>
 	
 <p id="demo"></p>
 	
@@ -35,6 +35,8 @@ obj = JSON.parse(text);
 document.getElementById("demo").innerHTML =JSON.stringify(obj);
 }
 </script>
+
+<script>	
 function test(){
 	
 function getKPI(tempExcel, tempWantedPlant){
@@ -525,8 +527,7 @@ let wantedPlant= 'Warren';
 getKPI(excelUsing, wantedPlant);
 	document.getElementById("demo").innerHTML = JSON.stringify(safetyKpiJsonBase);
 	}
-<script>
-	
+
 </script>
 	
 </body>
