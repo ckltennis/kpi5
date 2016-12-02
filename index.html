@@ -14,12 +14,15 @@
 <body>
 
 <h1>KPI Data Exraction</h1>
-<b>Live Demo</b><br />
-<p>Click to parse excel</p>
+<b>Live Demo</b><br />	
 
-<p id="demo"></p>	
-
+<button onclick="myFunction()">Click me</button>	
+	
+<p id="demo"></p>
+	
 <script>
+function myFunction() {
+	
 var text = '{"employees":[' +
 '{"firstName":"John","lastName":"Doe" },' +
 '{"firstName":"Anna","lastName":"Smith" },' +
@@ -28,6 +31,7 @@ var text = '{"employees":[' +
 obj = JSON.parse(text);
 document.getElementById("demo").innerHTML =
 obj.employees[1].firstName + " " + obj.employees[1].lastName;
+}
 </script> 
 	
 </body>
