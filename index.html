@@ -17,7 +17,7 @@
 <b>Live Demo</b><br />
 <p>Click to parse excel</p>
 
-<button onclick="myFunction()">Click me to change</button>
+<button onclick="myFunction2()">Click me to change</button>
 <br>	
 <button onclick="myFunction()">Click me to parse excel</button>	
 <p id="demo"></p>
@@ -25,9 +25,13 @@
 <script>
 function myFunction() {
     var x = document.getElementById("myScript").src;
-    var yes = 
     document.getElementById("demo").innerHTML = x;
 }
+	
+function myFunction2() {
+    var x = "hello";
+    document.getElementById("demo").innerHTML = x;
+}	
 </script>
 
 </body>
