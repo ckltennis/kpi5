@@ -14,13 +14,16 @@
 <b>Live Demo</b><br />
 <p>Click to parse excel</p>
 
-<button onclick="getKPI('safetyTest.xlsx')">Click me</button>
+<button onclick="getKPI()">Click me</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
+    let arr = []
     document.getElementById("demo").innerHTML = safetyKpiJsonBase;
+    safeKpiJsonBase.push(arr)
+    return arr
 }
 </script>
 
