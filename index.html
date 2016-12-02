@@ -17,19 +17,12 @@
 <b>Live Demo</b><br />
 <p>Click to parse excel</p>
 
-<button onclick="myFunction2()">Click me to change</button>
-<br>	
-<button onclick="myFunction()">Click me to parse excel</button>	
-<p id="demo"></p>
-	
 
 
 <script>
-document.write(getKPI())	
-	
 function myFunction() {
     var x = document.getElementById("myScript").src;
-    document.getElementById("demo").innerHTML = x;
+    document.getElementById("demo").innerHTML = $.get('safetyKpiJsonBase.json');
 }
 	
 function myFunction2() {
