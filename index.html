@@ -21,8 +21,12 @@
 <br>	
 <button onclick="myFunction()">Click me to parse excel</button>	
 <p id="demo"></p>
+	
+
 
 <script>
+document.write(getKPI())	
+	
 function myFunction() {
     var x = document.getElementById("myScript").src;
     document.getElementById("demo").innerHTML = x;
