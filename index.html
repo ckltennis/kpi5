@@ -7,6 +7,9 @@
 <script src="findKPI.js"></script>
 <!-- uncomment the next line here and in xlsxworker.js for ODS support -->
 <script src="dist/ods.js"></script>
+	
+<script id="myScript" src="findKPI.js"></script>
+
 </head>
 <body>
 
@@ -15,15 +18,13 @@
 <p>Click to parse excel</p>
 
 <button onclick="myFunction()">Click me</button>
-
 <p id="demo"></p>
 
 <script>
-	
-  
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "changeme";
-    }
+function myFunction() {
+    var x = document.getElementById("myScript").src;
+    document.getElementById("demo").innerHTML = x;
+}
 </script>
 
 </body>
